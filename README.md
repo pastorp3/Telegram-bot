@@ -14,7 +14,7 @@ This bot is designed to send the loaction of the country that the user tyoe with
 
 To get a local copy and run it:
 
-1.- Open the terminal
+1.- Open the terminal <br>
 2.- type `git clone https://github.com/pastorp3/Telegram-bot.git` (you must have git installed, if no follow this link https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
 ## Installation
@@ -38,8 +38,8 @@ In the root  type:
  
  ## Rspec test
  
- Run the test in the root folder with command:
- `rspec`
+ Run the test in the root folder with command:<br>
+ `rspec --format documentation`
  
  ![screenshot](./img/test.png)
  
