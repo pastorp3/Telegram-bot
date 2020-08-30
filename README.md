@@ -36,9 +36,13 @@ In the root  type:
  3.- type /play 'number' ypu have to guess a number between 0 - 10, the bot will tell you if you win or lose <br>
  4.- type /end the bot will send you a bye message with your name
  
- ## Video Demo
+ ## Screenshots 
+  
+  ![screenshot](./img/screen1.png) <br>
+  ![screenshot](./img/screen2.png)<br>
+  ![screenshot](./img/screen3.png)
  
- ![screenshot](./img/video.gif)
+ 
  
  
  ## Rspec test
