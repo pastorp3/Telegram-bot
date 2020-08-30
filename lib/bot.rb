@@ -42,7 +42,7 @@ class Bot
               answer = play.random(input)
                 if answer == false
                   r = play.answer
-                  bot.api.send_message(chat_id: message.chat.id, text: "lose the answer was #{r}")
+                  bot.api.send_message(chat_id: message.chat.id, text: "lose the number was #{r}")
                 else
                   r = play.answer
                   bot.api.send_message(chat_id: message.chat.id, text: "Win !!!!!")
