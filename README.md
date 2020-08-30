@@ -39,7 +39,7 @@ In the root  type:
  ## Rspec test
  
  Run the test in the root folder with command:
- `rspec`
+ `rspec --format documentation`
  
  ![screenshot](./img/test.png)
  
