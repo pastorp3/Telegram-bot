@@ -1,6 +1,7 @@
 require 'telegram/bot'
-require_relative 'test_json.rb'
-require_relative 'methods.rb'
+require_relative 'Location.rb'
+require_relative 'Methods.rb'
+require_relative 'Number.rb'
 
 class Bot
   def initialize
