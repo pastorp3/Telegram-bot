@@ -1,4 +1,4 @@
-require_relative 'bot.rb'
+require_relative 'lib\bot.rb'
 
 puts '----------Welcome to Telegram bot map-bot -----------'
 puts ' '
