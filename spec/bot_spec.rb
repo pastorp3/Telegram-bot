@@ -1,12 +1,12 @@
-# ./spec/bot_spec.rb
+# ../spec/bot_spec.rb
 
-require_relative '..\lib\Methods.rb'
-require_relative '..\lib\Location.rb'
-require_relative '..\lib\Number.rb'
+require_relative '../lib/Methods.rb'
+require_relative '../lib/Location.rb'
+require_relative '../lib/Number.rb'
 
 # ------------Test----------
 
-describe '#set_location method to validate input' do
+RSpec.describe '#set_location method to validate input' do
   it 'return false if the input length is less than 5' do
     input = '/map'
     expect(location(input)).to be(false)
@@ -28,7 +28,7 @@ describe '#set_location method to validate input' do
   end
 end
 
-describe '#set_number method to validate input' do
+RSpec.describe '#set_number method to validate input' do
   it 'return false if input length is less than 6' do
     input = '/play'
     expect(number(input)).to be(false)
@@ -55,7 +55,7 @@ describe '#set_number method to validate input' do
   end
 end
 
-describe 'SetLocation class' do
+RSpec.describe 'SetLocation class' do
   test = SetLocation.new
   it 'return false if the input is not in the database for the latitud' do
     input = 'asds'
@@ -75,22 +75,5 @@ describe 'SetLocation class' do
   it 'return a float that is the longitude if the input is in the database' do
     input = 'Mexico'
     expect(test.longitude(input).class).to eql(Float)
-  end
-end
-
-describe 'GenerateNumber class' do
-  test = GenerateNumber.new
-  it 'return false if the input is different the random number' do
-    input = '1'
-    # !!!!Important
-    # It could be possible to be true here because is a random number generator so I never know the number
-    expect(test.random(input)).to be(false)
-  end
-
-  it 'return true if the input is equals to the random number' do
-    input = '1'
-    # !!!!Important
-    # It could be possible to be true here because I dont know when the input will match with random number
-    expect(test.random(input).class).to eql(FalseClass)
   end
 end
