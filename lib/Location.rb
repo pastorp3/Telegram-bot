@@ -1,29 +1,24 @@
+# rubocop:disable Naming/FileName
 require_relative 'data\countries.rb'
 
- 
-
 class SetLocation
+  def initialize
+    @data = data
+  end
 
-    def initialize
-        @data = data()
+  def latitud(input)
+    if @data.include?(input)
+      @data[input][:latitude]
+    else false
     end
+  end
 
-    def latitud(input)
-        if @data.include?(input)
-            return @data[input][:latitude]
-        else return false
-        end
+  def longitude(input)
+    if @data.include?(input)
+      @data[input][:longitude]
+    else false
     end
-
-    def longitude(input)
-        if @data.include?(input)
-            return @data[input][:longitude]
-        else return false
-        end
-    end
-
-
+  end
 end
 
-
-
+# rubocop:enable Naming/FileName

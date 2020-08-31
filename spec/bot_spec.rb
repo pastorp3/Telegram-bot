@@ -6,92 +6,91 @@ require_relative '..\lib\Number.rb'
 
 # ------------Test----------
 
-describe '#set_location method to validate input' do 
-    it 'return false if the input length is less than 5' do
-        input = '/map'
-        expect(set_location(input)).to be(false)
-    end
+describe '#set_location method to validate input' do
+  it 'return false if the input length is less than 5' do
+    input = '/map'
+    expect(location(input)).to be(false)
+  end
 
-    it 'return false if the input match with a number' do
-        input = '/map 1'
-        expect(set_location(input)).to be(false)
-    end
+  it 'return false if the input match with a number' do
+    input = '/map 1'
+    expect(location(input)).to be(false)
+  end
 
-    it 'return name of the country if the first letter is capitalized' do
-        input = '/map Mexico'
-        expect(set_location(input)).to eql('Mexico')
-    end
+  it 'return name of the country if the first letter is capitalized' do
+    input = '/map Mexico'
+    expect(location(input)).to eql('Mexico')
+  end
 
-    it 'return name of the country capitalized if the first letter is not capitalized' do
-        input = '/map mexico'
-        expect(set_location(input)).to eql('Mexico')
-    end
-
+  it 'return name of the country capitalized if the first letter is not capitalized' do
+    input = '/map mexico'
+    expect(location(input)).to eql('Mexico')
+  end
 end
 
 describe '#set_number method to validate input' do
-    it 'return false if input length is less than 6' do 
-        input = '/play'
-        expect(set_number(input)).to be(false)
-    end
+  it 'return false if input length is less than 6' do
+    input = '/play'
+    expect(number(input)).to be(false)
+  end
 
-    it 'return false if the number include letters' do
-        input = '/play a'
-        expect(set_number(input)).to be(false)
-    end
+  it 'return false if the number include letters' do
+    input = '/play a'
+    expect(number(input)).to be(false)
+  end
 
-    it 'return false if the number length is greater than 2' do
-        input = '/play 100'
-        expect(set_number(input)).to be(false)
-    end
+  it 'return false if the number length is greater than 2' do
+    input = '/play 100'
+    expect(number(input)).to be(false)
+  end
 
-    it 'return false if the number is not between 0 to 10' do
-        input = '/play 11'
-        expect(set_number(input)).to be(false)
-    end
+  it 'return false if the number is not between 0 to 10' do
+    input = '/play 11'
+    expect(number(input)).to be(false)
+  end
 
-    it 'return number if it is between 0 to 10' do 
-        input = '/play 1'
-        expect(set_number(input)).to eql('1')
-    end
+  it 'return number if it is between 0 to 10' do
+    input = '/play 1'
+    expect(number(input)).to eql('1')
+  end
 end
 
-describe 'SetLocation class' do 
-    test = SetLocation.new
-    it 'return false if the input is not in the database for the latitud' do
-        input = 'asds'
-        expect(test.latitud(input)).to be(false)
-    end
+describe 'SetLocation class' do
+  test = SetLocation.new
+  it 'return false if the input is not in the database for the latitud' do
+    input = 'asds'
+    expect(test.latitud(input)).to be(false)
+  end
 
-    it 'return a float that is the latitud if the input is in the database' do
-        input = 'Mexico'
-        expect(test.latitud(input).class).to eql(Float)
-    end
+  it 'return a float that is the latitud if the input is in the database' do
+    input = 'Mexico'
+    expect(test.latitud(input).class).to eql(Float)
+  end
 
-    it 'return false if the input is not in the database for the longitude' do
-        input = 'asds'
-        expect(test.longitude(input)).to be(false)
-    end
+  it 'return false if the input is not in the database for the longitude' do
+    input = 'asds'
+    expect(test.longitude(input)).to be(false)
+  end
 
-    it 'return a float that is the longitude if the input is in the database' do
-        input = 'Mexico'
-        expect(test.longitude(input).class).to eql(Float)
-    end
+  it 'return a float that is the longitude if the input is in the database' do
+    input = 'Mexico'
+    expect(test.longitude(input).class).to eql(Float)
+  end
 end
 
 describe 'GenerateNumber class' do
-    test = GenerateNumber.new
-    it 'return false if the input is different the random number' do 
-        input = '1'
-        # !!!!Important
-        # It could be possible to be true here because is a random number generator so I never know the number
-        expect(test.random(input)).to be(false)
-    end
+  test = GenerateNumber.new
+  it 'return false if the input is different the random number' do
+    input = '1'
+    # !!!!Important
+    # It could be possible to be true here because is a random number generator so I never know the number
+    expect(test.random(input)).to be(false)
+  end
 
-    it 'return true if the input is equals to the random number' do
-        input = '1'
-        # !!!!Important
-        # It could be possible to be true here because I dont know when the input will match with random number
-        expect(test.random(input).class).to eql(FalseClass)
-    end
+  it 'return true if the input is equals to the random number' do
+    input = '1'
+    # !!!!Important
+    # It could be possible to be true here because I dont know when the input will match with random number
+    expect(test.random(input).class).to eql(FalseClass)
+  end
 end

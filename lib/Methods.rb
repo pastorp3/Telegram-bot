@@ -1,36 +1,45 @@
-def set_location(input)
-    if input.length <5
-      return false
+# rubocop:disable Naming/FileName
+# rubocop:disable Style/IfInsideElse
+
+def location(input)
+  if input.length < 5
+    false
+  else
+    i = 5
+    n = input.length
+    location = input[i..n]
+    if location.match(/[0-9]/)
+      false
     else
-      location = input[5..]
-      if location.match(/[0-9]/)
-        return false
+      if location[0].match(/[A-Z]/)
       else
-        if location[0].match(/[A-Z]/)
-        return location
-        else
-          location = location.capitalize!
-          return location
-        end
+        location = location.capitalize!
       end
+      location
+    end
   end
 end
 
-def set_number(input)
-  op = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+def number(input)
+  op = %w[0 1 2 3 4 5 6 7 8 9 10]
   if input.length < 6
-    return false
+    false
   else
-    number = input[6..]
-    if number.match(/[a-z]/) 
-      return false
+    i = 6
+    n = input.length
+    number = input[i..n]
+    if number.match(/[a-z]/)
+      false
     else
-      if number.length > 2 
-        return false
+      if number.length > 2
+        false
       elsif op.include?(number)
-        return number
-      else return false
+        number
+      else false
       end
     end
   end
 end
+
+# rubocop:enable Style/IfInsideElse
+# rubocop:enable Naming/FileName
