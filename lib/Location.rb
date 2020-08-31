@@ -13,6 +13,7 @@ class SetLocation
     end
   end
 
+  
   def longitude(input)
     if @data.include?(input)
       @data[input][:longitude]
