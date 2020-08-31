@@ -11,7 +11,7 @@ require_relative 'Number.rb'
 
 class Bot
   def initialize
-    token = ''
+    token = '1371304009:AAGM5UsCPOvnqp3nfSBQGwyxNyL75B_8quk'
     Telegram::Bot::Client.run(token) do |bot|
       bot.listen do |message|
         begin
