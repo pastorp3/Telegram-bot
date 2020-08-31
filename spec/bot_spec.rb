@@ -7,7 +7,6 @@ require_relative '..\lib\Number.rb'
 # ------------Test----------
 
 describe '#set_location method to validate input' do
-
   it 'return false if the input length is less than 5' do
     input = '/map'
     expect(location(input)).to be(false)
