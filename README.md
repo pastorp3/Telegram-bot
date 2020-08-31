@@ -38,10 +38,15 @@ In the root  type:
  
  ## Screenshots 
   
-  ![screenshot](./img/screen1.png) <br>
-  ![screenshot](./img/screen2.png)<br>
+  ![screenshot](./img/screen1.png)
+  <br>
+  <br>
+  ![screenshot](./img/screen2.png)
+  <br>
+  <br>
   ![screenshot](./img/screen3.png)
- 
+ <br>
+ <br>
  
  
  
