@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 # Telegram bot
 
-This bot is designed to send the loaction of the country that the user tyoe with the command, also it have a guess the number game that It generate a random number between 0 - 10.
+This bot is designed to send the loaction of the country that the user type with the command, also it have a guess the number game that It generate a random number between 0 - 10.
 
 ## Build With
 
@@ -25,9 +25,21 @@ In the root  type:
  
  to install the gemfile
  
+ Once you have the gemfile type:
+ `gem 'telegram-bot-ruby' `
+ 
+ and run again `bundle` to install telegram api gem,
+ it is already in the gem file in the repo, then 
+ with `bundle intall` will be enough
+ 
  Run the bot in the root with:
  
  `Ruby bin/main.rb`
+ 
+ 
+ 
+ ## Link of the Bot
+ https://web.telegram.org/#/im?p=@josepedraza_bot ( you must have the clone of the repo and install the files)
  
  ## Instructions
  
