@@ -14,5 +14,3 @@ jobs:
       - name: Setup RSpec
         run: |
           [ -f Gemfile ] && gem install bundler && bundle config set deployment 'true'
-      - name: RSpec Report
-        run: rspec --force-color --format documentation
