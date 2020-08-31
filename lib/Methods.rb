@@ -1,6 +1,5 @@
 # rubocop:disable Naming/FileName
 # rubocop:disable Style/IfInsideElse
-# rubocop:disable Metrics/PerceivedComplexity
 
 def location(input)
   if input.length < 5
@@ -42,6 +41,5 @@ def number(input)
   end
 end
 
-# rubocop:enable Metrics/PerceivedComplexity
 # rubocop:enable Style/IfInsideElse
 # rubocop:enable Naming/FileName
