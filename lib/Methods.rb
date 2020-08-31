@@ -1,5 +1,6 @@
 # rubocop:disable Naming/FileName
 # rubocop:disable Style/IfInsideElse
+# rubocop:disable Metrics/PerceivedComplexity
 
 def location(input)
   if input.length < 5
@@ -19,7 +20,6 @@ def location(input)
     end
   end
 end
-
 
 def number(input)
   op = %w[0 1 2 3 4 5 6 7 8 9 10]
@@ -42,5 +42,6 @@ def number(input)
   end
 end
 
+# rubocop:enable Metrics/PerceivedComplexity
 # rubocop:enable Style/IfInsideElse
 # rubocop:enable Naming/FileName
